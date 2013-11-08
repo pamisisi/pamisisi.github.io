@@ -45,13 +45,12 @@
           <div class="sidebar_base"></div>
         </div>
         <div class="sidebar">
-          <h3>Useful Links</h3>
+          <h3>Category</h3>
           <div class="sidebar_item">
             <ul>
-              <li><a href="#">link 1</a></li>
-              <li><a href="#">link 2</a></li>
-              <li><a href="#">link 3</a></li>
-              <li><a href="#">link 4</a></li>
+            {% for category in site.categories %}
+              <li><a href="/categories/{{category | first}}/">{{category | first}}{{ category | last | size }}</a></li>
+            {% endfor %}
             </ul>
           </div>
           <div class="sidebar_base"></div>
