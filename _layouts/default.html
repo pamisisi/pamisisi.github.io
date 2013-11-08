@@ -1,44 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
+<head>
+  <title>{{ page.title }}</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/style.css" />
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/syntax.css" />
+  <script type="text/javascript" src="{{ site.url }}/js/modernizr-1.5.min.js"></script>
+</head>
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1 class="title"><a href="/">{{ site.name }}<span class="logo_colour">_Blog</span></a></h1>
+          <h2>Hi, This is my blog on github Page.</h2>
         </div>
-
-    </body>
+        <form method="post" action="#" id="search">
+          <input class="search" type="text" name="search_field" value="search....." onclick="javascript: document.forms['search'].search_field.value=''" />
+          <input name="search" type="image" style="float: right;border: 0; margin: 20px 0 0 0;" src="{{ site.url }}/images/search.png" alt="search" title="search" />
+        </form>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="current"><a href="/">Home</a></li>
+          <li><a href="#">Examples</a></li>
+          <li><a href="#">A Page</a></li>
+          <li><a href="#">Another Page</a></li>
+          <li><a href="#">Example Drop Down</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <h3>About me</h3>
+          <div class="sidebar_item">
+            <h4>帕米斯斯</h4>
+            <h5>December 21, 2012</h5>
+            <p>这是一个被世界给遗忘的家伙。<br /><a href="#">About me</a></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <h3>Useful Links</h3>
+          <div class="sidebar_item">
+            <ul>
+              <li><a href="#">link 1</a></li>
+              <li><a href="#">link 2</a></li>
+              <li><a href="#">link 3</a></li>
+              <li><a href="#">link 4</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <h3>More Useful Links</h3>
+          <div class="sidebar_item">
+            <ul>
+              <li><a href="#">link 1</a></li>
+              <li><a href="#">link 2</a></li>
+              <li><a href="#">link 3</a></li>
+              <li><a href="#">link 4</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+      
+      {{ content }}
+      
+    </div>
+    <footer>
+      <p><a href="/">Home</a> | <a href="#">Examples</a> | <a href="#">A Page</a> | <a href="#">Another Page</a> | <a href="#">Contact Us</a></p>
+      <p>Copyright &copy; Pamisisi</p>
+    </footer>
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="{{ site.url }}/js/jquery.js"></script>
+  <script type="text/javascript" src="{{ site.url }}/js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="{{ site.url }}/js/jquery.sooperfish.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+</body>
 </html>
