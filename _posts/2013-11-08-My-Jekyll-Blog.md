@@ -5,8 +5,8 @@ category: 	"helloworld"
 tags:		[helloworld]
 ---
 
-啃了[jekyllrb](http://jekyllrb.com/docs/home/)官方英文17个小时。出来了结果全在这。
-[pamisisi blog](https://github.com/pamisisi/pamisisi.github.io)想要的自己 clone. ^_0
+啃了[jekyllrb](http://jekyllrb.com/docs/home/)官方英文17个小时。出来的结果全在这
+[pamisisi blog](https://github.com/pamisisi/pamisisi.github.io)，想要的自己 clone。 ^_0
 都懂得，低调！低调！
 
 ### Java Hello World
