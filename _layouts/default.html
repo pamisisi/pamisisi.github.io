@@ -3,21 +3,34 @@
 <head>
   <title>{{ page.title }}</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <!-- CSS loading html5 template  -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/style.css" />
   <!-- syntax highlighting CSS -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/syntax.css" />
+  <!-- javascript  loading jquery -->
+  <script type="text/javascript" src="{{ site.url }}/js/jquery.js"></script>
+  <script type="text/javascript" src="{{ site.url }}/js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="{{ site.url }}/js/jquery.sooperfish.js"></script>
+    <!-- javascript  loading html5 template  -->
   <script type="text/javascript" src="{{ site.url }}/js/modernizr-1.5.min.js"></script>
+  <!-- javascript  loading my lightbox -->
+  <script type="text/javascript" src="{{ site.url }}/js/plightbox.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
 </head>
 <body>
   <div id="main">
     <header>
       <div id="logo">
         <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <!--  -->
           <h1 class="title"><a href="/">{{ site.name }}<span class="logo_colour">_Blog</span></a></h1>
           <h2>Hi, This is my blog on github Page.</h2>
         </div>
-
+        <!-- google search -->
         <form method="get" action="http://www.google.com/search" id="search">
           <input type="hidden" name="hl" value="zh-CN">
           <input type="hidden" name="domains" value="pamisisi.github.io">
@@ -25,8 +38,11 @@
           <input class="search" type="text" name="q" value="search....." onclick="javascript: document.forms['search'].q.value=''" />
           <input name="search" type="image" style="float: right;border: 0; margin: 20px 0 0 0;" src="{{ site.url }}/images/search.png" alt="search" title="search" />
         </form>
+
       </div>
+
       <nav>
+        <!-- menu -->
         <ul class="sf-menu" id="nav">
           <li class="current"><a href="/">Home</a></li>
           <!--
@@ -38,9 +54,12 @@
            -->
         </ul>
       </nav>
+
     </header>
+
     <div id="site_content">
       <div id="sidebar_container">
+
         <div class="sidebar">
           <h3>About me</h3>
           <div class="sidebar_item">
@@ -50,18 +69,24 @@
           </div>
           <div class="sidebar_base"></div>
         </div>
+
+
         <div class="sidebar">
           <h3>Category</h3>
           <div class="sidebar_item">
             <ul>
+
               {% for category in site.categories %}
               <!--<li><a href="#{{ category[0] }}">{{ category[0] }} ({{ category[1] | size }})</a></li> -->
               <li><a href="/categories/{{ category | first }}/">{{ category[0] }}({{ category[1] | size }})</a></li>
               {% endfor %}
+
             </ul>
           </div>
           <div class="sidebar_base"></div>
         </div>
+
+
         <div class="sidebar">
           <h3>Tags</h3>
           <div class="sidebar_item">
@@ -74,6 +99,8 @@
           </div>
           <div class="sidebar_base"></div>
         </div>
+
+
         <div class="sidebar">
           <h3>Links</h3>
           <div class="sidebar_item">
@@ -86,20 +113,13 @@
       {{ content }}
       
     </div>
+    
     <footer>
     <!--<p><a href="/">Home</a> | <a href="#">Examples</a> | <a href="#">A Page</a> | <a href="#">Another Page</a> | <a href="#">Contact Us</a></p> -->
     <p><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-NonCommercial-ShareAlike 3.0</a></p>
       <p>Copyright &copy; Pamisisi</p>
     </footer>
   </div>
-  <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="{{ site.url }}/js/jquery.js"></script>
-  <script type="text/javascript" src="{{ site.url }}/js/jquery.easing-sooper.js"></script>
-  <script type="text/javascript" src="{{ site.url }}/js/jquery.sooperfish.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('ul.sf-menu').sooperfish();
-    });
-  </script>
+
 </body>
 </html>

@@ -4,6 +4,8 @@ title:  	"CSS Sprites 图标分割"
 category: 	css
 tags:		[css, sprites]
 ---
+CSS Sprites 是把所有小图标合并成一个张图片，然后在引用时候 指定 X, Y, width, height 值，分割显示。
+
 ### 第一种方法
 
 	.icon1 {
@@ -28,7 +30,3 @@ tags:		[css, sprites]
 	<div style="background-position: -0px -0px; width: 16px; height: 16px">&nbsp;</div>
 	<div style="background-position: -0px -26px; width: 16px; height: 16px">&nbsp;</div>
 
-
-
----------------------------------------
-<center>Author: [Pamisisi](mailto:pamisisi@live.com)</center>

@@ -2,7 +2,7 @@
   font-family: Yanone Kaffeesatz; 
     src: url('../fonts/YanoneKaffeesatz-Regular.eot'); 
     src: local("Yanone Kaffeesatz"), url('../fonts/YanoneKaffeesatz-Regular.ttf'); 
-} 
+}
 
 html { 
   height: 100%;}
@@ -22,7 +22,7 @@ body {
 }
 
 p { 
-  padding: 0 0 20px 0;
+  padding: 0 0 0 0;
   line-height: 1.7em;
 }
 
@@ -85,13 +85,6 @@ a, a:hover {
 
 a:hover { 
   text-decoration: none;
-}
-
-blockquote { 
-  margin: 20px 0; 
-  padding: 10px 20px 0 20px;
-  border: 1px solid #E5E5DB;
-  background: #FFF;
 }
 
 ul { 
@@ -277,7 +270,7 @@ footer {
   background: #545454;
   color: #A8AA94;
   margin: 0 0 0 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 footer p { 
@@ -400,9 +393,6 @@ table tr td {
   color: #bbb;
   background:#5E5E5E;
 }
-
-
-
 
 
 /**
@@ -572,17 +562,25 @@ ul ul span.sf-arrow {
   color: #AEB002;
 }
 
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
+/********************************************
+* Posts code
+*********************************************/
+blockquote { 
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  border: 1px solid #E5E5DB;
+  background: #F5F5F5;
+  border-radius: 12px;
+}
 
-/* standard */
 .content_item pre {
   border: 1px solid #ddd;
   background-color: #eef;
-  padding: 0 .4em;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-size: 13px;
 }
 
 .content_item ul, .content_item ol {
@@ -599,7 +597,6 @@ ul ul span.sf-arrow {
   border: none;
 }
 
-/* terminal */
 .content_item pre.terminal {
   border: 1px solid #000;
   background-color: #333;
@@ -608,4 +605,20 @@ ul ul span.sf-arrow {
 
 .content_item pre.terminal code {
   background-color: #333;
+}
+
+
+.content_item .lineno {
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #ddd;
+  text-align: right;
+}
+
+
+/******************************************************
+* disqus
+*******************************************************/
+#disqus_thread {
+  padding-top: 30px;
 }
