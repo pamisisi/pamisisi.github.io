@@ -48,9 +48,10 @@
           <h3>Category</h3>
           <div class="sidebar_item">
             <ul>
-            {% for category in site.categories %}
-              <li><a href="/categories/{{category | first}}/">{{category | first}}{{ category | last | size }}</a></li>
-            {% endfor %}
+              {% for category in site.categories %}
+              <!--<li><a href="#{{ category[0] }}">{{ category[0] }} ({{ category[1] | size }})</a></li> -->
+              <li><a href="/categories/{{ category | first }}/">{{ category[0] }}({{ category[1] | size }})</a></li>
+              {% endfor %}
             </ul>
           </div>
           <div class="sidebar_base"></div>
