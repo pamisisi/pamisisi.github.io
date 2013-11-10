@@ -1,0 +1,38 @@
+---
+layout: default
+title: category
+---
+
+<script type="text/javascript">
+	(function($) {
+		// 获取 URL 参数
+		$.getUrlParam = function(name) {
+			var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r!=null) return unescape(r[2]); return null;
+		}
+	})(jQuery);
+
+	$(document).ready(function() {
+		var p = $.getUrlParam("name");
+		if(p != null){
+			$(".content").hide();	//隐藏所有日记
+			var category = ".category-" + p + " .content";
+			$(category).show();		//显示 URL 参数指定的日记
+		}
+	});
+
+</script>
+
+{% for post in site.posts %}
+
+<div class="category-{{ post.categories }}">
+	<div class="content">
+		<h1><a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a></h1>
+		<div class="content_item">
+		{{ post.excerpt }}
+		</div>
+	</div>
+</div>
+
+{% endfor %}

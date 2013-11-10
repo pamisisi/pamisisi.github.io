@@ -30,6 +30,7 @@
           <h1 class="title"><a href="/">{{ site.name }}<span class="logo_colour">_Blog</span></a></h1>
           <h2>Hi, This is my blog on github Page.</h2>
         </div>
+
         <!-- google search -->
         <form method="get" action="http://www.google.com/search" id="search">
           <input type="hidden" name="hl" value="zh-CN">
@@ -78,7 +79,7 @@
 
               {% for category in site.categories %}
               <!--<li><a href="#{{ category[0] }}">{{ category[0] }} ({{ category[1] | size }})</a></li> -->
-              <li><a href="/categories/{{ category | first }}/">{{ category[0] }}({{ category[1] | size }})</a></li>
+              <li><a href="/category?name={{ category | first }}">{{ category[0] }}({{ category[1] | size }})</a></li>
               {% endfor %}
 
             </ul>
@@ -116,8 +117,8 @@
     
     <footer>
     <!--<p><a href="/">Home</a> | <a href="#">Examples</a> | <a href="#">A Page</a> | <a href="#">Another Page</a> | <a href="#">Contact Us</a></p> -->
-    <p><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-NonCommercial-ShareAlike 3.0</a></p>
-      <p>Copyright &copy; Pamisisi</p>
+    <p>This work is licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc/3.0/">Attribution-NonCommercial 3.0</a> License.</p>
+      <p>Copyright &copy; 2013 Pamisisi</p>
     </footer>
   </div>
 
